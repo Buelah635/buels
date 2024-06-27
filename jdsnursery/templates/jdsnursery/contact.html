@@ -1,0 +1,43 @@
+{% extends 'jdsnursery/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="jumbotron">
+	<div class="container">
+		<br>
+		<br>
+  <div class="row">
+    <div class="col-sm-4">
+    	<div class="card" style="width: 18rem;">
+  
+  <div class="card-body">
+    <h5 class="card-title">Contact me</h5>
+    <p><a href="#" class="btn btn-primary">Facebook</a></p>
+    <p><a href="https://github.com/solutions/ci-cd" class="btn btn-primary">Github</a></p>
+    <p><a href="https://www.instagram.com/?hl=en" class="btn btn-primary">Instagram</a></p>
+    <p><a href="#" class="btn btn-primary">Linked In</a></p>
+   <p>Phone no:7094805372
+   Email:prenciyabuelahd@gmail.com</p>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-6">
+    	<div class="card">
+  
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <form method="post"  action="/contact/">
+    	{% csrf_token %}
+    	{{form.as_p}}
+    	<button type="submit" class="btn btn-primary">Submit
+    	</button>
+    	
+    </form>
+  </div>
+    	
+</div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
